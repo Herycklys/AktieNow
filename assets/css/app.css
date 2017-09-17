@@ -1,27 +1,33 @@
 body{
-	font-size: 14px
+	font-size: 14px;
+	width: calc(100% - 5px);
 }
 .bg-red{
 	background-color: #9d0822;
 	color: #FFF;
 }
 #header {
-	padding: 10px 10px 0px 10px;
+	padding: 5px;
 }
-#header a.active {
-    border-bottom: 5px solid #FFF;
+#header ul {
+	display: flex;
+    justify-content: space-around;
 }
-#header li {
-    width:42%;
-    margin: 10px;
-    text-align:center;
+#header li{
+    text-align: center;
+    font-size: 0.8em;
+    width: 33%;
 }
 #header a {
     padding: 0;
-	color: #FFF;
+	padding-bottom: 3px;
+	color: #DDD;
 }
-#header li:hover a:not(.active) {
-    border-bottom: 5px solid rgba(255,255,255,0.1);
+#header a.active {
+	border-bottom: 4px solid #FFF;
+}
+#header li:hover a, #header a.active {
+	color: #FFF;
 }
 #header input{
 	width:88%;
@@ -75,7 +81,7 @@ input.form-control {
   background: #1fcc74;
 }
 .toogle input:checked + label:after {
-	left: calc(100% - 5px);
+	left: calc(100% - 3px);
 	transform: translateX(-100%);
 }
 .toogle label:active:after {
@@ -95,10 +101,36 @@ input.form-control {
 .submit-btn i{
 	position: absolute;
     right: 15px;
-    top: 12px;
+    top: 10px;
     font-size: 25px;
 }
-
 .submit-btn:hover{
 	background: #27b16b;
 }
+#statement .card {
+	border-radius:10px;
+    background-color: #f8f8f8;
+}
+
+/* customize scrollbar css */
+::-webkit-scrollbar{
+	width:5px;
+	background-color:#ffffff;
+}
+::-webkit-scrollbar:horizontal{
+	height:10px;
+}
+::-webkit-scrollbar-thumb{
+	background-color:#ffffff;
+	border:1px solid #000000;
+	border-radius:16px;
+}
+::-webkit-scrollbar-thumb:hover{
+	background-color:#bf4649;
+	border:1px solid #333333;
+}
+::-webkit-scrollbar-thumb:active{
+	background-color:#a6393d;
+	border:1px solid #333333;
+}
+

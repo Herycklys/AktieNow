@@ -1,19 +1,15 @@
 $(function() {
-	var client = ZAFClient.init();
-	client.invoke('resize', { width: '100%', height: '465px' });
-	showInfo();
-  
-	function showInfo() {
-		var requester_data = {
-			'name'         : 'Jane Doe',
-			'tags'         : ['tag1', 'tag2'],
-			'created_at'   : 'November 20, 2014',
-			'last_login_at': 'June 27, 2016'
-		};
 
+	var client = ZAFClient.init();
+	client.invoke('resize',{width: '100%',height: '465px'});
+	
+	$.getJSON('http://www.mocky.io/v2/59bea3ee260000df00526189',function(data){
 		var source = $("#requester-template").html();
 		var template = Handlebars.compile(source);
-		var html = template(requester_data);
+		var html = template(data.dados);
+		
+		console.log(data.dados.beneficio[0])
+		
 		$("#content").html(html);
-	}
+	})
 });
