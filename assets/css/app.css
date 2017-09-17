@@ -1,0 +1,104 @@
+body{
+	font-size: 14px
+}
+.bg-red{
+	background-color: #9d0822;
+	color: #FFF;
+}
+#header {
+	padding: 10px 10px 0px 10px;
+}
+#header a.active {
+    border-bottom: 5px solid #FFF;
+}
+#header li {
+    width:42%;
+    margin: 10px;
+    text-align:center;
+}
+#header a {
+    padding: 0;
+	color: #FFF;
+}
+#header li:hover a:not(.active) {
+    border-bottom: 5px solid rgba(255,255,255,0.1);
+}
+#header input{
+	width:88%;
+	display: inline-block;
+}
+#body {
+	padding-top:10px
+}
+input.form-control {
+	border-radius: 10px;
+    height: 30px;
+}
+.form-group {
+    margin-bottom: 5px;
+}
+#header form i {
+	color:#FFF;
+	font-size: 20px;
+	width: 10%;
+    text-align: center;
+}
+.form-group label{
+	margin:0;
+}
+
+.toogle input{
+	display:none
+}
+.toogle label{
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 50px;
+	height: 25px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+.toogle label:after {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+.toogle input:checked + label {
+  background: #1fcc74;
+}
+.toogle input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+.toogle label:active:after {
+	width: 20px;
+}
+.submit-btn {
+    background: #1fcc74;
+    border: 0;
+    border-radius: 20px;
+    color: #FFF;
+    padding: 7px 50px 7px 15px;
+    font-size: 14px;
+    line-height: 15px;
+    position: relative;
+	cursor:pointer;
+}
+.submit-btn i{
+	position: absolute;
+    right: 15px;
+    top: 12px;
+    font-size: 25px;
+}
+
+.submit-btn:hover{
+	background: #27b16b;
+}
