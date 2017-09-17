@@ -33,12 +33,12 @@
 						<div class="form-group form-inline">
 							<div class="col-8 p-0 mr-2">
 								<label for="exampleInputEmail1">Email</label>
-								<input type="text" class="form-control" value="{{dadosConsulta.emailConsulta}}">
+								<input type="text" class="form-control" value="{{#email}}{{/email}}">
 							</div>
 							<div class="col-2 p-0 text-center mr-2">
 								<label>Opt-in ?</label><br>
 								<div class="toogle">
-									<input type="checkbox" id="optin">
+									<input type="checkbox" id="optin" {{#optin}}{{/optin}}>
 									<label for="optin">Toggle</label>
 								</div>
 							</div>
